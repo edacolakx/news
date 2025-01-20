@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between; /* Logo ve navbar'ı en uçlara yerleştir */
+  align-items: center; /* Dikeyde hizalama */
+  padding: 20px;
+  background-color: #333; /* Koyu arka plan */
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.categories-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: aqua;
+}
+
+.category-item {
+  padding: 5px;
+}

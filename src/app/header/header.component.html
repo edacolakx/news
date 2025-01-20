@@ -1,0 +1,12 @@
+<div class="header">
+    <div style="display: flex; flex-direction: row;justify-content: space-between;width: 100%;">
+         Eda Çolak
+         <input type="text" placeholder="Search">
+    </div>
+
+    <div style="justify-content: space-between; display: flex; flex-direction: row;width: 50%;margin-top: 10px;">
+        <div (click)="goToDetailsPage(item)"  class="category-item" *ngFor="let item of categories">
+            {{item }}
+        </div>
+    </div>
+</div>

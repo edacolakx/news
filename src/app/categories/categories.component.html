@@ -1,0 +1,50 @@
+<div class="container ms-3">
+    <h1>Kategoriler</h1>
+    <mat-checkbox style=" color: black;" (change)="onBusinessChange($event)">
+        İş
+    </mat-checkbox>
+    <mat-checkbox style=" color: black;" (change)="onEntartainmentChange($event)">
+        Eğlence
+    </mat-checkbox>
+    <mat-checkbox style=" color: black;" (change)="onBusinessChange($event)">
+        Genel
+    </mat-checkbox>
+    <mat-checkbox style=" color: black;" (change)="onBusinessChange($event)">
+        Sağlık
+    </mat-checkbox>
+    <mat-checkbox style=" color: black;" (change)="onBusinessChange($event)">
+        Bilim
+    </mat-checkbox>
+    <mat-checkbox style=" color: black;" (change)="onBusinessChange($event)">
+        Spor
+    </mat-checkbox>
+    <mat-checkbox style=" color: black;" (change)="onBusinessChange($event)">
+        Teknoloji
+    </mat-checkbox>
+ 
+</div>
+
+<div *ngFor="let category of categories">
+    <label>
+        <input type="checkbox" [value]="category.name" (change)="onCategoryChange($event, category.name)" />
+        {{ category.label }}
+    </label>
+</div>
+
+<div>
+    <div style="border-width: 2px;" *ngFor="let item of article">
+        <p style="color:blue">{{item.title}}</p>
+        <p>{{item.content}}</p>
+    </div>
+</div>
+
+<div *ngIf="article.length > 0">
+  <h2>Makaleler:</h2>
+  <div *ngFor="let item of article">
+    <p>{{ item.author }}: {{ item.title }}</p>
+  </div>
+</div>
+
+<div *ngIf="article.length === 0">
+  <p>Henüz bir kategori seçilmedi.</p>
+</div>
