@@ -1,1 +1,8 @@
-<p>individual works!</p>
+<div style="padding: 20px;">
+    <h1 style="font-weight:bold;">{{details.category}}</h1>
+
+    <div *ngFor="let item of newsData">
+     <img style="width: 50%; height: auto;" [src]=" item.urlToImage" alt="">  
+     <p>{{item.title}}</p>
+    </div>
+</div>

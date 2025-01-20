@@ -31,9 +31,9 @@ export class HeaderComponent {
     if (route== "Anasayfa") {
       this.router.navigate(["/"]);
     } else if (route == "İş") {
-      this.router.navigate(["/business"]);
+      this.router.navigate(["/individual"], { queryParams: { category: route } });
     }else if (route == "Eğlence") {
-      this.router.navigate(["/entertainment"]);
+      this.router.navigate(["/individual"], { queryParams: { category: route } });
     }else if (route == "Genel") {
       this.router.navigate(["/general"]);
     }else if (route == "Sağlık") {

@@ -10,6 +10,7 @@ import { EntertainmentComponent } from './entertainment/entertainment.component'
 import { ScienceComponent } from './science/science.component';
 import { SportsComponent } from './sports/sports.component';
 import { TechnologyComponent } from './technology/technology.component';
+import { IndividualComponent } from './individual/individual.component';
 
 export const routes: Routes = [
     {
@@ -41,5 +42,8 @@ export const routes: Routes = [
     },
     {
         path:"technology",component:TechnologyComponent
+    },
+    {
+        path:"individual",component:IndividualComponent
     },
 ];
