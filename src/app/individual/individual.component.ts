@@ -11,15 +11,14 @@ import { CommonModule } from '@angular/common';
 })
 export class IndividualComponent {
   details: any = {};
-  newsData: any[] = []; // Haberleri saklamak için dizi
-
+  newsData: any[] = [];
   constructor(private route: ActivatedRoute) {
     console.log(this.details)
     this.fetchdata()
   }
 
   ngOnInit(): void {
-    // Query parametrelerini al
+
     this.route.queryParams.subscribe((params) => {
       this.details = params;
     });
@@ -34,7 +33,7 @@ routename:string=""
     }
     axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=${this.routename}&apiKey=676f017549224f488970f1835f9db971`)
     .then((response:any) =>{
-      console.log("response",response.data.articles); // Kontrol için konsola yazdır
+      console.log("response",response.data.articles); 
       this.newsData=response.data.articles
     })
     .catch((error) => {
