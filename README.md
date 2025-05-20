@@ -1,59 +1,54 @@
-# News
+# News (Angular Öğrenme Projesi)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.1.
+Bu proje, kısa sürede Angular öğrenmeye çalışırken aynı zamanda pratik yapmak için geliştirilmiştir. Farklı kategorilerdeki haberleri [NewsAPI](https://newsapi.org/) üzerinden çekip kullanıcıya sunar. Kod yapısı öğrenme amaçlı olduğu için bazı bölümler karışık olabilir.
 
-## Development server
+## Özellikler
 
-To start a local development server, run:
+- Farklı haber kategorilerinden (iş, eğlence, spor, vb.) haberleri listeleme
+- Kategori seçimine göre haberleri filtreleme
+- Ana sayfada slider ve kart görünümü
+- Angular Material ve Bootstrap ile modern arayüz
 
-```bash
-ng serve
-```
+## Kurulum ve Çalıştırma
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1. **Bağımlılıkları yükle:**
 
-## Code scaffolding
+   ```bash
+   npm install
+   ```
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+2. **Geliştirme sunucusunu başlat:**
 
-```bash
-ng generate component component-name
-```
+   ```bash
+   ng serve
+   ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+   veya
 
-```bash
-ng generate --help
-```
+   ```bash
+   npm start
+   ```
 
-## Building
+3. **Tarayıcıda aç:**
+   ```
+   http://localhost:4200/
+   ```
 
-To build the project run:
+## Klasör Yapısı
 
-```bash
-ng build
-```
+- `src/app/categories/` : Kategori seçimi ve haber listeleme bileşeni
+- `src/app/home/` : Ana sayfa ve slider
+- `src/app/business/`, `src/app/entertainment/` vb.: Kategoriye özel bileşenler
+- `src/app/header/` : Üst menü bileşeni
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Kullanılan Teknolojiler
 
-## Running unit tests
+- Angular 19
+- Angular Material
+- Bootstrap 5
+- Axios (API istekleri için)
+- NewsAPI (Haber verisi için)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Notlar
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Proje öğrenme amaçlıdır, kod yapısı ve bileşenler sadeleştirilebilir.
